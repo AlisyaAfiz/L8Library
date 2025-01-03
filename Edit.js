@@ -14,7 +14,7 @@ const Edit = ({navigation, route}) => {
     const[cover,setCover] = useState(route.params.cover);
 
     const setData = async(value) => {
-        AsyncStorage.setItem("booksdata", value);
+        AsyncStorage.setItem("booklist", value);
         navigation.navigate("Home");
     }
 

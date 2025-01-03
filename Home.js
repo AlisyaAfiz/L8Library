@@ -9,11 +9,18 @@ const styles = StyleSheet.create({
    },
    headerText: {
     fontSize: 20,
-    margin: 10,
     textAlign: 'center',
     fontWeight:'bold',
-    fontFamily:'impact'
+    fontFamily:'impact',
+       padding: 5
   },
+    title: {
+       textAlign: 'center',
+        fontSize: 50,
+        fontWeight:'bold',
+        padding: 20,
+        fontFamily:'cursive'
+    }
 });
 
 const Home = ({navigation}) => {
@@ -21,7 +28,7 @@ const Home = ({navigation}) => {
     const [mydata, setMyData] = useState([]);
 
     const getData = async() => {
-        let datastr = await AsyncStorage.getItem("booksdata");
+        let datastr = await AsyncStorage.getItem("booklist");
         if(datastr!=null) {
             jsondata = JSON.parse(datastr);
             setMyData(jsondata);
@@ -58,8 +65,9 @@ const Home = ({navigation}) => {
   };
 
    return (
-    <View style={{marginBottom: 30, backgroundColor:'#fffbec'}}>
+    <View style={{marginBottom: 30, backgroundColor:'#cfd5f4'}}>
       <StatusBar/>
+        <Text style={styles.title}>Library</Text>
 	  <Button title='Add New Book'
               onPress={()=>{
                   let datastr = JSON.stringify(mydata);
@@ -68,8 +76,8 @@ const Home = ({navigation}) => {
       }
       />
       <SectionList sections={mydata} renderItem={renderItem}
-      renderSectionHeader={({section:{type,bgcolor}})=>(
-      <Text style={[styles.headerText,{backgroundColor:bgcolor}]}>
+      renderSectionHeader={({section:{type,bgcolor, color}})=>(
+      <Text style={[styles.headerText,{backgroundColor:bgcolor, color:color}]}>
         {type}
       </Text>
       )}/>

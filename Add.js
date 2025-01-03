@@ -11,7 +11,7 @@ const Add = ({navigation, route}) => {
   const[type,setType] = useState("Fiction");
 
   const setData = async(value) => {
-      AsyncStorage.setItem("booksdata", value);
+      AsyncStorage.setItem("booklist", value);
       navigation.navigate("Home");
     }
 
