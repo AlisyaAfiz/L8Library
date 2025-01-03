@@ -19,7 +19,7 @@ const Edit = ({navigation, route}) => {
     }
 
     return (
-    <View>
+    <View style={{backgroundColor:'#fffdf3', paddingBottom: 500, padding: 10}}>
       <Text>Title:</Text>
       <TextInput value={title} style={{borderWidth:1}} onChangeText={(text)=>setTitle(text)}/>
         <Text>ISBN:</Text>
@@ -30,7 +30,7 @@ const Edit = ({navigation, route}) => {
         <TextInput value={cover} style={{borderWidth:1}} onChangeText={(text)=>setCover(text)}/>
       <View style={{flexDirection:"row"}}>
         <View style={{margin:10,flex:1}}>
-        <Button title='Save'
+        <Button title='Save' color='#614444'
           onPress={()=>{
             let indexnum = 1
             if(route.params.type=="Fiction") {
@@ -47,7 +47,7 @@ const Edit = ({navigation, route}) => {
         />
         </View>
         <View style={{margin:10,flex:1}}>
-        <Button title='Delete'
+        <Button title='Delete' color='#614444'
           onPress={()=>{
             let indexnum = 1
             if(route.params.type=="Fiction") {

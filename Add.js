@@ -16,7 +16,7 @@ const Add = ({navigation, route}) => {
     }
 
   return (
-    <View>
+    <View style={{backgroundColor:'#fffdf3', paddingBottom: 500, padding: 10}}>
       <StatusBar/>
       <Text>Title:</Text>
       <TextInput style={{borderWidth:1}} onChangeText={(text)=>setTitle(text)}/>
@@ -34,7 +34,7 @@ const Add = ({navigation, route}) => {
           {label:"Non-Fiction", value:"Non-Fiction"}
         ]}
       />
-      <Button title='Submit'
+      <Button title='Submit' color='#614444'
       onPress={()=>{
           let mydata = JSON.parse(route.params.datastring);
           let item = {key:title, isbn:isbn, copies:copies, cover:cover};

@@ -58,7 +58,7 @@ const Home = ({navigation}) => {
                 <Text style={{padding: 10}}>Copies Owned: {item.copies}</Text>
             </View>
             <View style={{alignSelf:'right'}}>
-                <Image source={{uri: item.cover}} style={{width: 140, height: 200}}/>
+                <Image source={{uri: item.cover}} style={{width: 140, height: 210}}/>
             </View>
         </View>
     </TouchableOpacity>
