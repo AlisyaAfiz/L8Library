@@ -66,7 +66,7 @@ const Home = ({navigation}) => {
   };
 
    return (
-    <View style={{marginBottom: 30, backgroundColor:'#fffdf3'}}>
+    <View style={{marginBottom: 160, backgroundColor:'#fffdf3'}}>
       <StatusBar/>
         <Text style={styles.title}>Library</Text>
         <View style={{padding: 20}}>
