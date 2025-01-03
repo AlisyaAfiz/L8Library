@@ -3,12 +3,12 @@ const datasource = [
       {key: 'Harry Potter', isbn: '90735426176', copies: '1', cover: 'https://res.cloudinary.com/arenaillustration/image/upload/v1605979316/blog/JOnny_Duddle_Harry_Potter_Philiophers_Stone_hinphu.jpg'},
       {key: 'Sherlock Holmes', isbn: '98673512783', copies: '0', cover: 'https://m.media-amazon.com/images/I/71mTKQLmfQL._AC_UF1000,1000_QL80_.jpg'},
     ],
-    type:"Fiction", bgcolor:"black", color:"white"},
+    type:"Fiction", bgcolor:"#615c44", color:"white"},
     {data:[
       {key: 'In Cold Blood', isbn: '98352718372', copies: '2', cover: 'https://m.media-amazon.com/images/I/81jaN0aJ+jL._AC_UF1000,1000_QL80_.jpg'},
       {key: 'Educated', isbn: '9878326871', copies: '3', cover: 'https://m.media-amazon.com/images/I/71-4MkLN5jL.jpg'},
     ],
-    type:"Non-Fiction", bgcolor:"white", color:"black"}
+    type:"Non-Fiction", bgcolor:"#444a61", color:"white"}
   ];
 
   export {datasource};

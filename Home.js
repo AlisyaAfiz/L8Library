@@ -18,8 +18,9 @@ const styles = StyleSheet.create({
        textAlign: 'center',
         fontSize: 50,
         fontWeight:'bold',
-        padding: 20,
-        fontFamily:'cursive'
+        padding: 10,
+        fontFamily:'cursive',
+        color: '#614444'
     }
 });
 
@@ -65,16 +66,18 @@ const Home = ({navigation}) => {
   };
 
    return (
-    <View style={{marginBottom: 30, backgroundColor:'#cfd5f4'}}>
+    <View style={{marginBottom: 30, backgroundColor:'#fffdf3'}}>
       <StatusBar/>
         <Text style={styles.title}>Library</Text>
-	  <Button title='Add New Book'
+        <View style={{padding: 20}}>
+	  <Button title='Add New Book' color='#614444'
               onPress={()=>{
                   let datastr = JSON.stringify(mydata);
                   navigation.navigate("Add", {datastring: datastr});
               }
       }
       />
+        </View>
       <SectionList sections={mydata} renderItem={renderItem}
       renderSectionHeader={({section:{type,bgcolor, color}})=>(
       <Text style={[styles.headerText,{backgroundColor:bgcolor, color:color}]}>
